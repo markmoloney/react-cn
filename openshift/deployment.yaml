@@ -1,0 +1,208 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    app.openshift.io/vcs-ref: aa8605391659585720bd9a2e0e5e8be5bff8df4b
+    app.openshift.io/vcs-uri: https://github.com/markmoloney/react-cn.git
+    deployment.kubernetes.io/revision: "1"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"app.openshift.io/vcs-ref":"aa8605391659585720bd9a2e0e5e8be5bff8df4b","app.openshift.io/vcs-uri":"https://github.com/markmoloney/react-cn.git"},"labels":{"app":"react-cn","app.kubernetes.io/instance":"react-cn","app.kubernetes.io/name":"react-cn","app.openshift.io/runtime":"js","helm.sh/chart":"react-cn-1.0.0-rcaa86053"},"name":"react-cn","namespace":"react-cn"},"spec":{"replicas":1,"selector":{"matchLabels":{"app.kubernetes.io/instance":"react-cn","app.kubernetes.io/name":"react-cn"}},"template":{"metadata":{"labels":{"app.kubernetes.io/instance":"react-cn","app.kubernetes.io/name":"react-cn"}},"spec":{"containers":[{"env":[{"name":"INGRESS_HOST","value":""},{"name":"PROTOCOLS","value":""},{"name":"LOG_LEVEL","value":"debug"}],"image":"image-registry.openshift-image-registry.svc:5000/react-cn/react-cn:aa86053","imagePullPolicy":"IfNotPresent","livenessProbe":{"httpGet":{"path":"/","port":"http"}},"name":"react-cn","ports":[{"containerPort":3000,"name":"http","protocol":"TCP"}],"readinessProbe":{"httpGet":{"path":"/","port":"http"}},"resources":null}]}}}}
+  generation: 1
+  labels:
+    app: react-cn
+    app.kubernetes.io/instance: react-cn
+    app.kubernetes.io/name: react-cn
+    app.openshift.io/runtime: js
+    helm.sh/chart: react-cn-1.0.0-rcaa86053
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:app.openshift.io/vcs-ref: {}
+          f:app.openshift.io/vcs-uri: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/name: {}
+          f:app.openshift.io/runtime: {}
+          f:helm.sh/chart: {}
+      f:spec:
+        f:progressDeadlineSeconds: {}
+        f:replicas: {}
+        f:revisionHistoryLimit: {}
+        f:selector:
+          f:matchLabels:
+            .: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/name: {}
+        f:strategy:
+          f:rollingUpdate:
+            .: {}
+            f:maxSurge: {}
+            f:maxUnavailable: {}
+          f:type: {}
+        f:template:
+          f:metadata:
+            f:labels:
+              .: {}
+              f:app.kubernetes.io/instance: {}
+              f:app.kubernetes.io/name: {}
+          f:spec:
+            f:containers:
+              k:{"name":"react-cn"}:
+                .: {}
+                f:env:
+                  .: {}
+                  k:{"name":"INGRESS_HOST"}:
+                    .: {}
+                    f:name: {}
+                  k:{"name":"LOG_LEVEL"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"PROTOCOLS"}:
+                    .: {}
+                    f:name: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:livenessProbe:
+                  .: {}
+                  f:failureThreshold: {}
+                  f:httpGet:
+                    .: {}
+                    f:path: {}
+                    f:port: {}
+                    f:scheme: {}
+                  f:periodSeconds: {}
+                  f:successThreshold: {}
+                  f:timeoutSeconds: {}
+                f:name: {}
+                f:ports:
+                  .: {}
+                  k:{"containerPort":3000,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                f:readinessProbe:
+                  .: {}
+                  f:failureThreshold: {}
+                  f:httpGet:
+                    .: {}
+                    f:path: {}
+                    f:port: {}
+                    f:scheme: {}
+                  f:periodSeconds: {}
+                  f:successThreshold: {}
+                  f:timeoutSeconds: {}
+                f:resources: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+            f:dnsPolicy: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext: {}
+            f:terminationGracePeriodSeconds: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2021-03-16T14:24:09Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:availableReplicas: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2021-03-16T14:25:00Z"
+  name: react-cn
+  namespace: react-cn
+  resourceVersion: "6956997"
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: react-cn
+      app.kubernetes.io/name: react-cn
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: react-cn
+        app.kubernetes.io/name: react-cn
+    spec:
+      containers:
+      - env:
+        - name: INGRESS_HOST
+        - name: PROTOCOLS
+        - name: LOG_LEVEL
+          value: debug
+        image: image-registry.openshift-image-registry.svc:5000/react-cn/react-cn:aa86053
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: http
+            scheme: HTTP
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        name: react-cn
+        ports:
+        - containerPort: 3000
+          name: http
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: http
+            scheme: HTTP
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
