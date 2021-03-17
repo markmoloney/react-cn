@@ -31,7 +31,7 @@ class UIShell extends Component {
     "Update Form",
     "Validating Form Wizard 1",
     "Validating Form Wizard 2",
-    "Simple List",
+    "Grocery List",
     "Table List",
     "List to List",
     "Linked List",
@@ -65,7 +65,7 @@ class UIShell extends Component {
   render() {
     return (
       <div>
-        <Header aria-label="IBM Platform Name">
+        <Header aria-label="IBM Blue Grocery">
           <SkipToContent />
           <HeaderName href="#" prefix="IBM">
             {this.header}

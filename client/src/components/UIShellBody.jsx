@@ -21,7 +21,7 @@ class UIShellBody extends Component {
     "Update Form": UpdateForm,
     "Validating Form Wizard 1": ValidatingFormWizard1,
     "Validating Form Wizard 2": ValidatingFormWizard2,
-    "Simple List": SimpleList,
+    "Grocery List": SimpleList,
     "Table List": TableList,
     "List to List": ListToList,
     "Linked List": LinkedList,
