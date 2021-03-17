@@ -4,12 +4,12 @@ import ValidatingForm from "../pattern-components/ValidatingForm";
 import UpdateForm from "../pattern-components/UpdateForm";
 import ValidatingFormWizard1 from "../pattern-components/ValidatingFormWizard1";
 import ValidatingFormWizard2 from "../pattern-components/ValidatingFormWizard2";
-import SimpleList from "../pattern-components/SimpleList";
+import GroceryList from "../pattern-components/GroceryList";
 import TableList from "../pattern-components/TableList";
 import ListToList from "../pattern-components/ListToList";
 import LinkedList from "../pattern-components/LinkedList";
 import MasterDetail from "../pattern-components/MasterDetail";
-import CreateReadUpdateDelete from "../pattern-components/CreateReadUpdateDelete";
+import ShoppingList from "../pattern-components/ShoppingList";
 import SearchList from "../pattern-components/SearchList";
 import SearchForm from "../pattern-components/SearchForm";
 import "../pattern-components/patterns.scss";
@@ -21,12 +21,12 @@ class UIShellBody extends Component {
     "Update Form": UpdateForm,
     "Validating Form Wizard 1": ValidatingFormWizard1,
     "Validating Form Wizard 2": ValidatingFormWizard2,
-    "Grocery List": SimpleList,
+    "Grocery List": GroceryList,
     "Table List": TableList,
     "List to List": ListToList,
     "Linked List": LinkedList,
     "Master Detail": MasterDetail,
-    "Create, Read, Update, Delete": CreateReadUpdateDelete,
+    "Shopping List": ShoppingList,
     "Search List": SearchList,
     "Search Form": SearchForm
   };

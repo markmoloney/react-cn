@@ -52,11 +52,11 @@ class SimpleList extends Component {
   };
 
   render() {
-    const data = ["row1", "row2", "row3"];
+    const data = ["row1", "row2", "apple"];
     return (
       <div className="bx--grid pattern-container">
         <Header
-          title="Simple List"
+          title="Grocery List"
           subtitle="This pattern will display an array of model objects in a simple list column list."
         />
         <div className="bx--row">
@@ -66,7 +66,7 @@ class SimpleList extends Component {
                 <StructuredListRow head>
                   <StructuredListCell head />
                   <StructuredListCell head>
-                    Simple List Title
+                    Grocery List
                   </StructuredListCell>
                 </StructuredListRow>
               </StructuredListHead>

@@ -14,33 +14,21 @@ import Header from "./Header";
 import ValidatingForm from "./ValidatingForm";
 import "./patterns.scss";
 
-class CreateReadUpdateDelete extends Component {
+class ShoppingList extends Component {
   constructor(props) {
     super(props);
     const data = [
       [
-        { label: "Name", value: "Lin", type: "textinput" },
-        { label: "Address", value: "123 Main Street", type: "textinput" },
-        { label: "City", value: "Austin", type: "textinput" },
-        { label: "State", value: ["TX"], type: "dropdown" },
-        { label: "ZipCode", value: "12345", type: "textinput" },
-        { label: "Country", value: ["United States"], type: "dropdown" }
+        { label: "Item", value: "Apple", type: "textinput" },
+        { label: "Quantity", value: "1", type: "textinput" }
       ],
       [
-        { label: "Name", value: "Mak", type: "textinput" },
-        { label: "Address", value: "45 2nd Street", type: "textinput" },
-        { label: "City", value: "Austin", type: "textinput" },
-        { label: "State", value: ["TX"], type: "dropdown" },
-        { label: "ZipCode", value: "78766", type: "textinput" },
-        { label: "Country", value: ["United States"], type: "dropdown" }
+        { label: "Item", value: "Mask", type: "textinput" },
+        { label: "Quantity", value: "45", type: "textinput" }
       ],
       [
-        { label: "Name", value: "Joe", type: "textinput" },
-        { label: "Address", value: "40 Down Street", type: "textinput" },
-        { label: "City", value: "San Francisco", type: "textinput" },
-        { label: "State", value: ["CA"], type: "dropdown" },
-        { label: "ZipCode", value: "90706", type: "textinput" },
-        { label: "Country", value: ["United States"], type: "dropdown" }
+        { label: "Item", value: "Bread", type: "textinput" },
+        { label: "Quantity", value: "2", type: "textinput" }
       ]
     ];
     this.state = {
@@ -58,12 +46,8 @@ class CreateReadUpdateDelete extends Component {
     let data = this.state.data.slice();
     let selectedRow = this.state.data.length;
     data[selectedRow] = [
-      { label: "Name", value: "Enter data below", type: "textinput" },
-      { label: "Address", value: "", type: "textinput" },
-      { label: "City", value: "", type: "textinput" },
-      { label: "State", value: [""], type: "dropdown" },
-      { label: "ZipCode", value: "", type: "textinput" },
-      { label: "Country", value: [""], type: "dropdown" }
+      { label: "Item", value: "Enter data below", type: "textinput" },
+      { label: "Quantity", value: "", type: "textinput" }
     ];
     this.setState({ data, selectedRow, adding: true });
   };
@@ -80,12 +64,8 @@ class CreateReadUpdateDelete extends Component {
     let data = this.state.data.slice();
     let selectedRow = this.state.selectedRow;
     data[selectedRow] = [
-      { label: "Name", value: newData.name, type: "textinput" },
-      { label: "Address", value: newData.address, type: "textinput" },
-      { label: "City", value: newData.city, type: "textinput" },
-      { label: "State", value: [newData.state], type: "dropdown" },
-      { label: "ZipCode", value: newData.zipCode, type: "textinput" },
-      { label: "Country", value: [newData.country], type: "dropdown" }
+      { label: "Item", value: newData.item, type: "textinput" },
+      { label: "Quantity", value: newData.quantity, type: "textinput" }
     ];
     this.setState({ data });
   };
@@ -134,7 +114,7 @@ class CreateReadUpdateDelete extends Component {
     return (
       <div className="bx--grid pattern-container">
         <Header
-          title="Create, Read, Update, Delete"
+          title="Shopping List"
           subtitle="This composite pattern is build from the Table List pattern and uses the Validating Form pattern for creating items, Update Form pattern for Update."
         />
         <div className="bx--row">
@@ -191,4 +171,4 @@ class CreateReadUpdateDelete extends Component {
   }
 }
 
-export default CreateReadUpdateDelete;
+export default ShoppingList;

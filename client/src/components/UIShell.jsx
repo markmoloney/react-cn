@@ -36,7 +36,7 @@ class UIShell extends Component {
     "List to List",
     "Linked List",
     "Master Detail",
-    "Create, Read, Update, Delete",
+    "Shopping List",
     "Search List",
     "Search Form"
   ];
