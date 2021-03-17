@@ -12,7 +12,7 @@ import { iconCheckmarkSolid } from "carbon-icons";
 import Header from "./Header";
 import "./patterns.scss";
 
-class SimpleList extends Component {
+class GroceryList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -84,4 +84,4 @@ class SimpleList extends Component {
   }
 }
 
-export default SimpleList;
+export default GroceryList;

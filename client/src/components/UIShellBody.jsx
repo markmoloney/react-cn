@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DisplayForm from "../pattern-components/DisplayForm";
-import ValidatingForm from "../pattern-components/ValidatingForm";
+import ShoppingValidatingForm from "../pattern-components/ShoppingValidatingForm";
+import FavouritesValidatingForm from "../pattern-components/FavouritesValidatingForm";
 import UpdateForm from "../pattern-components/UpdateForm";
 import ValidatingFormWizard1 from "../pattern-components/ValidatingFormWizard1";
 import ValidatingFormWizard2 from "../pattern-components/ValidatingFormWizard2";
@@ -10,6 +11,7 @@ import ListToList from "../pattern-components/ListToList";
 import LinkedList from "../pattern-components/LinkedList";
 import MasterDetail from "../pattern-components/MasterDetail";
 import ShoppingList from "../pattern-components/ShoppingList";
+import FavouritesList from "../pattern-components/FavouritesList"
 import SearchList from "../pattern-components/SearchList";
 import SearchForm from "../pattern-components/SearchForm";
 import "../pattern-components/patterns.scss";
@@ -17,7 +19,8 @@ import "../pattern-components/patterns.scss";
 class UIShellBody extends Component {
   components = {
     "Display Form": DisplayForm,
-    "Validating Form": ValidatingForm,
+    "Shopping Validating Form": ShoppingValidatingForm,
+    "Favourites Validating Form": FavouritesValidatingForm,
     "Update Form": UpdateForm,
     "Validating Form Wizard 1": ValidatingFormWizard1,
     "Validating Form Wizard 2": ValidatingFormWizard2,
@@ -27,6 +30,7 @@ class UIShellBody extends Component {
     "Linked List": LinkedList,
     "Master Detail": MasterDetail,
     "Shopping List": ShoppingList,
+    "Favourites List": FavouritesList,
     "Search List": SearchList,
     "Search Form": SearchForm
   };

@@ -14,24 +14,21 @@ import Header from "./Header";
 import ValidatingForm from "./ShoppingValidatingForm";
 import "./patterns.scss";
 
-class ShoppingList extends Component {
+class FavouritesList extends Component {
   constructor(props) {
     super(props);
     const data = [
       [
-        { label: "Item", value: "Apple", type: "textinput" },
-        { label: "Quantity", value: "1", type: "textinput" },
-        { label: "Needed", value: "yes", type: "textinput" }
+        { label: "Item", value: "Milk", type: "textinput" },
+        { label: "Quantity", value: "1", type: "textinput" }
       ],
       [
-        { label: "Item", value: "Mask", type: "textinput" },
-        { label: "Quantity", value: "45", type: "textinput" },
-        { label: "Needed", value: "yes", type: "textinput" }
+        { label: "Item", value: "Oranges", type: "textinput" },
+        { label: "Quantity", value: "7", type: "textinput" }
       ],
       [
         { label: "Item", value: "Bread", type: "textinput" },
-        { label: "Quantity", value: "2", type: "textinput" },
-        { label: "Needed", value: "no", type: "textinput" }
+        { label: "Quantity", value: "3", type: "textinput" }
       ]
     ];
     this.state = {
@@ -50,8 +47,7 @@ class ShoppingList extends Component {
     let selectedRow = this.state.data.length;
     data[selectedRow] = [
       { label: "Item", value: "Enter data below", type: "textinput" },
-      { label: "Quantity", value: "", type: "textinput" },
-      { label: "Needed", value: "", type: "textinput" }
+      { label: "Quantity", value: "", type: "textinput" }
     ];
     this.setState({ data, selectedRow, adding: true });
   };
@@ -69,8 +65,7 @@ class ShoppingList extends Component {
     let selectedRow = this.state.selectedRow;
     data[selectedRow] = [
       { label: "Item", value: newData.item, type: "textinput" },
-      { label: "Quantity", value: newData.quantity, type: "textinput" },
-      { label: "Needed", value: newData.needed, type: "textinput" }
+      { label: "Quantity", value: newData.quantity, type: "textinput" }
     ];
     this.setState({ data });
   };
@@ -119,7 +114,7 @@ class ShoppingList extends Component {
     return (
       <div className="bx--grid pattern-container">
         <Header
-          title="Shopping List"
+          title="Favourites List"
           subtitle="This composite pattern is build from the Table List pattern and uses the Validating Form pattern for creating items, Update Form pattern for Update."
         />
         <div className="bx--row">
@@ -176,4 +171,4 @@ class ShoppingList extends Component {
   }
 }
 
-export default ShoppingList;
+export default FavouritesList;

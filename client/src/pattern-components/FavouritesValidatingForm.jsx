@@ -118,7 +118,7 @@ class ValidatingForm extends Component {
               <Form>
                 <TextInput
                   id="item"
-                  item="item"
+                  name="item"
                   value={this.state.item || ""}
                   onChange={this.saveData}
                   labelText="Item"

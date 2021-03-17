@@ -27,7 +27,8 @@ class UIShell extends Component {
   menuTitle = "12 Design Pattern";
   menuItems = [
     "Display Form",
-    "Validating Form",
+    "Shopping Validating Form",
+    "Favourites Validating Form",
     "Update Form",
     "Validating Form Wizard 1",
     "Validating Form Wizard 2",
@@ -37,6 +38,7 @@ class UIShell extends Component {
     "Linked List",
     "Master Detail",
     "Shopping List",
+    "Favourites List",
     "Search List",
     "Search Form"
   ];
